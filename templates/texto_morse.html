@@ -1,0 +1,31 @@
+{% extends 'go_back.html' %}  {% load static %}
+
+{% block content %}
+
+<div id="content" class="bg-black text-white h-screen flex  items-center flex-col justify-center ">
+
+    <div id="title" class="flex justify-center items-center h-1/3 font-thin">
+        <h1>Código Morse</h1>
+    </div>
+
+<div class="w-1/2 bg-white rounded-2xl py-8 text-black flex items-center justify-center flex-col gap-5 absolute">
+    <h2>Texto a Código Morse</h2>
+    <label for="textoInput">Ingrese texto:</label>
+    <input type="text"  class=" border-black border-2 px-2 rounded-xl"  id="textoInput">
+    <button onclick="convertirTextoAMorse()"  class="bg-green-700 py-5 px-3 rounded-2xl">Convertir a Morse</button>
+    <p>Resultado en Morse: <span id="resultadoMorse"></span></p>
+</div>
+
+<div class="w-1/2 bg-white rounded-2xl py-8 text-black flex items-center justify-center flex-col gap-5 absolute hidden">
+    <h2>Código Morse a Texto</h2>
+    <label for="morseInput" class=" border-black border-2 px-2 rounded-xl">Ingrese código Morse (use espacio para separar letras y " / " para separar palabras):</label>
+    <input type="text" id="morseInput">
+    <button onclick="convertirMorseATexto()"  class="bg-green-700 py-5 px-3 rounded-2xl">Convertir a Texto</button>
+    <p>Resultado en Texto: <span id="resultadoTexto"></span></p>
+</div>
+</div>    
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="{% static 'scripts/morse.js' %}"></script>
+
+{% endblock %}

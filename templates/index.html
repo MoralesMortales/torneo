@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>index</title>
+</head>
+<body>
+<div id="content" class="bg-black text-white h-screen flex justify-center items-center flex-col">
+
+    <div class="h-2/6 w-2/4 flex-col justify-around items-center rounded-2xl flex">
+        <h1>Elija una app</h1>
+        <div class="flex gap-5 justify-center items-center">
+            <a href="{% url 'morse' %}" class="px-3 py-4 bg-white text-black rounded-2xl hover:bg-gray-800 hover:transition-all transition-all">Morse a texto</a>
+            <a href="{% url 'binario' %}" class="px-3 py-4 bg-white text-black rounded-2xl hover:bg-gray-800 hover:transition-all transition-all">Numero a Binario</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+<script src="{% static 'scripts/script.js' %}">
+
+    </script>
+</body>
+</html>
