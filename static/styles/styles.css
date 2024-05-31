@@ -1,3 +1,22 @@
 #content{
     background:linear-gradient(#8ce03d), rgb(199, 149, 149);
 }
+
+#thebutton{
+
+    padding:20px 50px;
+    background-color: #8ce03d;
+}
+
+#mainTittle{
+    font-size: 5em;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

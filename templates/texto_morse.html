@@ -1,4 +1,4 @@
-{% extends 'go_back.html' %}  {% load static %}
+{% extends 'go_back.html' %} {% load static %}
 
 {% block content %}
 
@@ -8,22 +8,25 @@
         <h1>Código Morse</h1>
     </div>
 
-<div class="w-1/2 bg-white rounded-2xl py-8 text-black flex items-center justify-center flex-col gap-5 absolute">
-    <h2>Texto a Código Morse</h2>
-    <label for="textoInput">Ingrese texto:</label>
-    <input type="text"  class=" border-black border-2 px-2 rounded-xl"  id="textoInput">
-    <button onclick="convertirTextoAMorse()"  class="bg-green-700 py-5 px-3 rounded-2xl">Convertir a Morse</button>
-    <p>Resultado en Morse: <span id="resultadoMorse"></span></p>
+    <div id="traducir"
+        class="w-1/2 bg-white rounded-2xl py-8 text-black flex items-center justify-center flex-col gap-5 absolute shadow-xl shadow-slate-600">
+        <h2 class="text-gray-400 font-serif">Código Morse a Texto</h2>
+        <label for="morseInput" class="font-serif"">Ingrese código Morse:</label>
+        <input type="text" id="morseInput" class="font-serif border-black border-2 px-2 rounded-xl">
+        <button onclick="convertirMorseATexto()" class="bg-green-700 py-5 px-3 rounded-2xl font-serif">Convertir a Texto</button>
+        <p>Resultado en Texto: <span id="resultadoTexto"></span></p>
+    
+        <a href="{% url 'morse2' %}" class="hover:bg-gray-800 hover:transition-all transition-all bg-white rounded-2xl px-2 py-3 hover:text-white font-serif">Cambio de modo</a>
+    
+    </div>
+
+
+        
+  
+
+
 </div>
 
-<div class="w-1/2 bg-white rounded-2xl py-8 text-black flex items-center justify-center flex-col gap-5 absolute hidden">
-    <h2>Código Morse a Texto</h2>
-    <label for="morseInput" class=" border-black border-2 px-2 rounded-xl">Ingrese código Morse (use espacio para separar letras y " / " para separar palabras):</label>
-    <input type="text" id="morseInput">
-    <button onclick="convertirMorseATexto()"  class="bg-green-700 py-5 px-3 rounded-2xl">Convertir a Texto</button>
-    <p>Resultado en Texto: <span id="resultadoTexto"></span></p>
-</div>
-</div>    
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="{% static 'scripts/morse.js' %}"></script>

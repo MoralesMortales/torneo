@@ -10,17 +10,17 @@
 </head>
 <body>
     {% block content %}
-    <div id="content" class="bg-black text-white h-screen flex  items-center flex-col">
+    <div id="content" class="bg-black text-white h-screen flex  items-center flex-col ">
 
             <div id="title" class="flex justify-center items-center h-1/3 font-thin">
-            <h1>Conversión Decimal a Binario</h1>
             </div>
-
-    <div class="w-1/2 bg-white rounded-2xl py-8 text-black flex items-center justify-center flex-col gap-5">
-            <label for="decimalInput">Ingrese un número decimal:</label>
-            <input type="number" class=" border-black border-2 px-2 rounded-xl" id="decimalInput" min="0">
-            <button onclick="convertir()" class="bg-green-700 py-5 px-3 rounded-2xl">Convertir</button>
-            <p>Resultado binario: <span id="resultadoBinario"></span></p>
+            
+            <div class="w-1/2 bg-white rounded-2xl py-8 text-black flex items-center justify-center flex-col gap-5 shadow-xl shadow-slate-600">
+            <h1 class="text-gray-400 font-serif">Conversión Decimal a Binario</h1>
+            <label for="decimalInput" class="font-serif">Ingrese un número decimal:</label>
+            <input type="number" class="font-serif  border-black border-2 px-2 rounded-xl" id="decimalInput" min="0">
+            <button onclick="convertir()" class="font-serif bg-green-500 hover:bg-green-700 hover:transition-all transition-all py-5 px-3 rounded-2xl">Convertir</button>
+            <p class="font-serif">Resultado binario: <span id="resultadoBinario"></span></p>
         </div>
     </div>    
 
